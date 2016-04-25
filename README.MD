@@ -54,10 +54,10 @@ JsonDocument document = ...
 String json = document.handle(new JsonTextJsonHandler(writer));
 ```
 
-[AppendingJavaTextJsonHandler]: https://markenwerk.github.io/java-utils-json-handler-text/index.html?net/markenwerk/utils/json/handler/text/AppendingJavaTextJsonHandler.html
-[AppendingJsonTextJsonHandler]: https://markenwerk.github.io/java-utils-json-handler-text/index.html?net/markenwerk/utils/json/handler/text/AppendingJsonTextJsonHandler.html
-[JavaTextJsonHandler]: https://markenwerk.github.io/java-utils-json-handler-text/index.html?net/markenwerk/utils/json/handler/text/JavaTextJsonHandler.html
-[JsonTextJsonHandler]: https://markenwerk.github.io/java-utils-json-handler-text/index.html?net/markenwerk/utils/json/handler/text/JsonTextJsonHandler.html
+[AppendingJavaTextJsonHandler]: https://markenwerk.github.io/java-utils-json-handler-text/index.html?net/markenwerk/utils/json/common/handler/text/AppendingJavaTextJsonHandler.html
+[AppendingJsonTextJsonHandler]: https://markenwerk.github.io/java-utils-json-handler-text/index.html?net/markenwerk/utils/json/common/handler/text/AppendingJsonTextJsonHandler.html
+[JavaTextJsonHandler]: https://markenwerk.github.io/java-utils-json-handler-text/index.html?net/markenwerk/utils/json/common/handler/text/JavaTextJsonHandler.html
+[JsonTextJsonHandler]: https://markenwerk.github.io/java-utils-json-handler-text/index.html?net/markenwerk/utils/json/common/handler/text/JsonTextJsonHandler.html
 
 [JsonHandler]: https://markenwerk.github.io/java-utils-json-handler/index.html?net/markenwerk/utils/json/handler/JsonHandler.html
 
