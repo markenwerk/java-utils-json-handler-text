@@ -30,9 +30,9 @@ This library is hosted in the [Maven Central Repository](https://maven-badges.he
  
 ## Usage
 
-### JSON text handler
+### Java text handler
 
-A [`AppendingJavaTextJsonHandler`][AppendingJavaTextJsonHandler] is a [`JsonHandler`][JsonHandler] that appends a JSON text that represents the described JSON document to an [`Appendable`][Appendable]. 
+A [`AppendingJavaTextJsonHandler`][AppendingJavaTextJsonHandler] is a [`JsonHandler`][JsonHandler] that appends a text that mimics the `toString()` behavior of Java collection classes and represents the described JSON document to an [`Appendable`][Appendable]. 
 
 ```java
 // a JsonDocument
@@ -44,7 +44,37 @@ document.handle(new AppendingJavaTextJsonHandler(writer));
 writer.close();
 ```
 
-- A [`JsonTextJsonHandler`][JsonTextJsonHandler] is a [`JsonHandler`][JsonHandler] that creates a [`String`][String] containing a JSON text that represents the described JSON document. 
+A [`JavaTextJsonHandler`][JavaTextJsonHandler] is a [`JsonHandler`][JsonHandler] that creates a [`String`][String] containing a text that mimics the `toString()` behavior of Java collection classes and represents the described JSON document. 
+
+```java
+// a JsonDocument
+JsonDocument document = ...
+
+// returns a pretty printed json document  
+String json = document.handle(new JavaTextJsonHandler(writer));
+```
+
+The returned [`String`][String] for the [`example.json`](https://gist.github.com/toKrause/208992e7625f0b8a9d04e7283f09fc26)has the following content:
+
+```
+{null=null, boolean=true, long=-42, double=-23.42, array=[foo, bar]}
+```
+
+### JSON text handler
+
+A [`AppendingJsonTextJsonHandler`][AppendingJsonTextJsonHandler] is a [`JsonHandler`][JsonHandler] that appends a JSON text that represents the described JSON document to an [`Appendable`][Appendable]. 
+
+```java
+// a JsonDocument
+JsonDocument document = ...
+
+// writes a pretty printed json document into test.json  
+Writer writer = new FileWriter(new File("test.json"));
+document.handle(new AppendingJsonTextJsonHandler(writer));
+writer.close();
+```
+
+A [`JsonTextJsonHandler`][JsonTextJsonHandler] is a [`JsonHandler`][JsonHandler] that creates a [`String`][String] containing a JSON text that represents the described JSON document. 
 
 ```java
 // a JsonDocument
@@ -52,6 +82,21 @@ JsonDocument document = ...
 
 // returns a pretty printed json document  
 String json = document.handle(new JsonTextJsonHandler(writer));
+```
+
+The returned [`String`][String] for the [`example.json`](https://gist.github.com/toKrause/208992e7625f0b8a9d04e7283f09fc26)has the following content:
+
+```json
+{
+    "null" : null,
+    "boolean" : true,
+    "long" : -42,
+    "double" : -23.42,
+    "array" : [
+        "foo",
+        "bar"
+    ]
+}
 ```
 
 [AppendingJavaTextJsonHandler]: https://markenwerk.github.io/java-utils-json-handler-text/index.html?net/markenwerk/utils/json/common/handler/text/AppendingJavaTextJsonHandler.html
