@@ -362,14 +362,16 @@ public class JsonTextJsonHandlerTests {
 
 		String result = handler.getResult();
 
-		Assert.assertEquals("{\n\"n\": null,\n\"b\": true,\n\"l\": -42,\n\"d\": -23.42,\n\"a\": [\n\"foo\",\n\"bar\"\n]\n}", result);
+		Assert.assertEquals(
+				"{\n\"n\": null,\n\"b\": true,\n\"l\": -42,\n\"d\": -23.42,\n\"a\": [\n\"foo\",\n\"bar\"\n]\n}", result);
 
 	}
 
 	@Test
 	public void onDocument_defaultIndentation() {
 
-		JsonHandler<String> handler = new JsonTextJsonHandler();
+		JsonHandler<String> handler = new JsonTextJsonHandler(new WhitespaceIndentation(Whitespace.TAB, 1,
+				LineBreak.SYSTEM));
 
 		handler.onDocumentBegin();
 		handler.onObjectBegin();
