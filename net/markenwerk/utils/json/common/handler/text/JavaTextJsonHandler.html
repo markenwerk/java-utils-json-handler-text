@@ -154,6 +154,12 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/common/handler/t
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/JavaTextJsonHandler.html#JavaTextJsonHandler--">JavaTextJsonHandler</a></span>()</code>
+<div class="block">Creates a new <a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/JavaTextJsonHandler.html" title="class in net.markenwerk.utils.json.common.handler.text"><code>JavaTextJsonHandler</code></a> using the
+ <a href="../../../../../../../net/markenwerk/utils/text/indentation/Indentation.html#DEFAULT"><code>default</code></a> Indentation.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/JavaTextJsonHandler.html#JavaTextJsonHandler-net.markenwerk.utils.text.indentation.Indentation-">JavaTextJsonHandler</a></span>(<a href="../../../../../../../net/markenwerk/utils/text/indentation/Indentation.html" title="interface in net.markenwerk.utils.text.indentation">Indentation</a>&nbsp;indentation)</code>
 <div class="block">Creates a new <a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/JavaTextJsonHandler.html" title="class in net.markenwerk.utils.json.common.handler.text"><code>JavaTextJsonHandler</code></a>.</div>
 </td>
 </tr>
@@ -217,12 +223,30 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/common/handler/t
 <a name="JavaTextJsonHandler--">
 <!--   -->
 </a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JavaTextJsonHandler</h4>
+<pre>public&nbsp;JavaTextJsonHandler()
+                    throws <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></pre>
+<div class="block">Creates a new <a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/JavaTextJsonHandler.html" title="class in net.markenwerk.utils.json.common.handler.text"><code>JavaTextJsonHandler</code></a> using the
+ <a href="../../../../../../../net/markenwerk/utils/text/indentation/Indentation.html#DEFAULT"><code>default</code></a> Indentation.</div>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - If the given <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html?is-external=true" title="class or interface in java.lang"><code>Appendable</code></a> is null.</dd>
+</dl>
+</li>
+</ul>
+<a name="JavaTextJsonHandler-net.markenwerk.utils.text.indentation.Indentation-">
+<!--   -->
+</a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>JavaTextJsonHandler</h4>
-<pre>public&nbsp;JavaTextJsonHandler()</pre>
+<pre>public&nbsp;JavaTextJsonHandler(<a href="../../../../../../../net/markenwerk/utils/text/indentation/Indentation.html" title="interface in net.markenwerk.utils.text.indentation">Indentation</a>&nbsp;indentation)</pre>
 <div class="block">Creates a new <a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/JavaTextJsonHandler.html" title="class in net.markenwerk.utils.json.common.handler.text"><code>JavaTextJsonHandler</code></a>.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>indentation</code> - The <a href="../../../../../../../net/markenwerk/utils/text/indentation/Indentation.html" title="interface in net.markenwerk.utils.text.indentation"><code>Indentation</code></a> to be used.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - If the given <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html?is-external=true" title="class or interface in java.lang"><code>Appendable</code></a> is null or if the
              given <a href="../../../../../../../net/markenwerk/utils/text/indentation/Indentation.html" title="interface in net.markenwerk.utils.text.indentation"><code>Indentation</code></a> is null.</dd>
