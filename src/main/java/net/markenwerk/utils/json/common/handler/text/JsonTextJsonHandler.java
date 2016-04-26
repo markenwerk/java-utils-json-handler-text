@@ -21,11 +21,13 @@
  */
 package net.markenwerk.utils.json.common.handler.text;
 
+import net.markenwerk.utils.json.handler.JsonHandlingException;
 import net.markenwerk.utils.text.indentation.Indentation;
 
 /**
- * A {@link JsonTextJsonHandler} is a {@link AbstractAppendingJsonTextJsonHandler} that calculates a
- * pretty JSON text for the handled JSON document as a result.
+ * A {@link JsonTextJsonHandler} is a
+ * {@link AbstractAppendingJsonTextJsonHandler} that calculates a pretty JSON
+ * text for the handled JSON document as a result.
  * 
  * @author Torsten Krause (tk at markenwerk dot net)
  * @since 1.0.0
@@ -38,7 +40,7 @@ public final class JsonTextJsonHandler extends AbstractAppendingJsonTextJsonHand
 	 * 
 	 * 
 	 * @throws IllegalArgumentException
-	 *            If the given {@link Appendable} is {@literal null}.
+	 *             If the given {@link Appendable} is {@literal null}.
 	 */
 	public JsonTextJsonHandler() throws IllegalArgumentException {
 		this(Indentation.DEFAULT);
@@ -48,18 +50,18 @@ public final class JsonTextJsonHandler extends AbstractAppendingJsonTextJsonHand
 	 * Creates a new {@link JsonTextJsonHandler}.
 	 * 
 	 * @param indentation
-	 *           The {@link Indentation} to be used.
+	 *            The {@link Indentation} to be used.
 	 * 
 	 * @throws IllegalArgumentException
-	 *            If the given {@link Appendable} is {@literal null} or if the
-	 *            given {@link Indentation} is {@literal null}.
+	 *             If the given {@link Appendable} is {@literal null} or if the
+	 *             given {@link Indentation} is {@literal null}.
 	 */
 	public JsonTextJsonHandler(Indentation indentation) {
 		super(new StringBuilder(), indentation);
 	}
 
 	@Override
-	public String getResult() {
+	public String getResult() throws JsonHandlingException {
 		return getAppendable().toString();
 	}
 

@@ -23,6 +23,7 @@ package net.markenwerk.utils.json.common.handler.text;
 
 import java.io.IOException;
 
+import net.markenwerk.utils.json.common.InvalidJsonNameException;
 import net.markenwerk.utils.json.common.InvalidJsonValueException;
 import net.markenwerk.utils.json.handler.IdleJsonHandler;
 import net.markenwerk.utils.json.handler.JsonHandler;
@@ -131,7 +132,8 @@ public abstract class AbstractAppendingJsonTextJsonHandler<ActualAppendable exte
 	}
 
 	@Override
-	public final void onName(String name) throws JsonHandlingException {
+	public final void onName(String name) throws InvalidJsonNameException, JsonHandlingException {
+		checkName(name);
 		appendUnescaped(indentation.get(depth, true));
 		indented = true;
 		appendUnescaped("\"");
@@ -167,14 +169,14 @@ public abstract class AbstractAppendingJsonTextJsonHandler<ActualAppendable exte
 
 	@Override
 	public final void onDouble(double value) throws InvalidJsonValueException, JsonHandlingException {
-		checkDoubleValue(value);
+		checkDouble(value);
 		writeIndentation();
 		appendUnescaped(Double.toString(value));
 	}
 
 	@Override
-	public final void onString(String value) throws JsonHandlingException {
-		checkStringValue(value);
+	public final void onString(String value) throws InvalidJsonValueException, JsonHandlingException {
+		checkString(value);
 		writeIndentation();
 		appendUnescaped("\"");
 		appendEscaped(value);
