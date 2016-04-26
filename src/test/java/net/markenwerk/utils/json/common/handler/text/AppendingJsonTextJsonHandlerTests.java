@@ -5,15 +5,16 @@ import org.junit.Before;
 import org.junit.Test;
 
 import net.markenwerk.utils.json.common.InvalidJsonValueException;
-import net.markenwerk.utils.json.common.handler.text.AppendingJsonTextJsonHandler;
 import net.markenwerk.utils.json.handler.JsonHandler;
+import net.markenwerk.utils.text.indentation.LineBreak;
 import net.markenwerk.utils.text.indentation.Whitespace;
 import net.markenwerk.utils.text.indentation.WhitespaceIndentation;
 
 @SuppressWarnings("javadoc")
 public class AppendingJsonTextJsonHandlerTests {
 
-	private static final WhitespaceIndentation INDENTATION = new WhitespaceIndentation(Whitespace.SPACE, 0);
+	private static final WhitespaceIndentation INDENTATION = new WhitespaceIndentation(Whitespace.SPACE, 0,
+			LineBreak.UNIX);
 
 	private StringBuilder builder;
 
@@ -310,7 +311,7 @@ public class AppendingJsonTextJsonHandlerTests {
 
 		String result = builder.toString();
 
-		Assert.assertEquals("[null]", result);
+		Assert.assertEquals("[\nnull\n]", result);
 
 	}
 
@@ -344,7 +345,7 @@ public class AppendingJsonTextJsonHandlerTests {
 
 		String result = builder.toString();
 
-		Assert.assertEquals("{\"n\":null}", result);
+		Assert.assertEquals("{\n\"n\": null\n}", result);
 
 	}
 
@@ -378,7 +379,7 @@ public class AppendingJsonTextJsonHandlerTests {
 
 		String result = builder.toString();
 
-		Assert.assertEquals("{\"n\":null,\"b\":true,\"l\":-42,\"d\":-23.42,\"a\":[\"foo\",\"bar\"]}", result);
+		Assert.assertEquals("{\n\"n\": null,\n\"b\": true,\n\"l\": -42,\n\"d\": -23.42,\n\"a\": [\n\"foo\",\n\"bar\"\n]\n}", result);
 
 	}
 

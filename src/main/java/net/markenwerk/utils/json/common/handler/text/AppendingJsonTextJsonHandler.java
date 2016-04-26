@@ -37,7 +37,7 @@ public final class AppendingJsonTextJsonHandler extends AbstractAppendingJsonTex
 
 	/**
 	 * Creates a new {@link AppendingJsonTextJsonHandler} using the
-	 * {@link Indentation#DEFAULT} {@link Indentation}.
+	 * {@link Indentation#DEFAULT default} {@link Indentation}.
 	 * 
 	 * @param appendable
 	 *           The {@link Appendable} to be used.

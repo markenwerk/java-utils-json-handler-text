@@ -22,13 +22,13 @@
 package net.markenwerk.utils.json.common.handler.text;
 
 import net.markenwerk.utils.json.handler.JsonHandlingException;
-
+import net.markenwerk.utils.text.indentation.Indentation;
 
 /**
  * A {@link AppendingJavaTextJsonHandler} is a
- * {@link AbstractAppendingJavaTextJsonHandler} that appends the handled JSON
- * document as a text, that mimics the {@link Object#toString()} behavior of
- * Javas collection classes, and calculates no result.
+ * {@link AbstractAppendingJsonTextJsonHandler} that appends the handled JSON
+ * document as a pretty JSON text to a given {@link Appendable} and calculates
+ * no result.
  * 
  * @author Torsten Krause (tk at markenwerk dot net)
  * @since 1.0.0
@@ -36,13 +36,26 @@ import net.markenwerk.utils.json.handler.JsonHandlingException;
 public final class AppendingJavaTextJsonHandler extends AbstractAppendingJavaTextJsonHandler<Appendable, Void> {
 
 	/**
-	 * Creates a new {@link AppendingJavaTextJsonHandler}.
+	 * Creates a new {@link AppendingJavaTextJsonHandler} using the
+	 * {@link Indentation#INVISIBLE invisible} {@link Indentation}.
 	 * 
 	 * @param appendable
 	 *            The {@link Appendable} to be used.
 	 */
 	public AppendingJavaTextJsonHandler(Appendable appendable) {
-		super(appendable);
+		this(appendable, Indentation.INVISIBLE);
+	}
+
+	/**
+	 * Creates a new {@link AppendingJavaTextJsonHandler}.
+	 * 
+	 * @param appendable
+	 *            The {@link Appendable} to be used.
+	 * @param indentation
+	 *            The {@link Indentation} to be used.
+	 */
+	public AppendingJavaTextJsonHandler(Appendable appendable, Indentation indentation) {
+		super(appendable, indentation);
 	}
 
 	@Override

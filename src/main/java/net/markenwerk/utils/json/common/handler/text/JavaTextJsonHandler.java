@@ -22,6 +22,8 @@
 package net.markenwerk.utils.json.common.handler.text;
 
 import net.markenwerk.utils.text.indentation.Indentation;
+import net.markenwerk.utils.text.indentation.InvisibleIndentation;
+import net.markenwerk.utils.text.indentation.LineBreak;
 
 /**
  * A {@link JavaTextJsonHandler} is a
@@ -35,14 +37,29 @@ import net.markenwerk.utils.text.indentation.Indentation;
 public final class JavaTextJsonHandler extends AbstractAppendingJavaTextJsonHandler<StringBuilder, String> {
 
 	/**
+	 * Creates a new {@link JavaTextJsonHandler} using the
+	 * {@link Indentation#DEFAULT default} Indentation.
+	 * 
+	 * 
+	 * @throws IllegalArgumentException
+	 *             If the given {@link Appendable} is {@literal null}.
+	 */
+	public JavaTextJsonHandler() throws IllegalArgumentException {
+		this(new InvisibleIndentation(LineBreak.NONE));
+	}
+
+	/**
 	 * Creates a new {@link JavaTextJsonHandler}.
+	 * 
+	 * @param indentation
+	 *            The {@link Indentation} to be used.
 	 * 
 	 * @throws IllegalArgumentException
 	 *             If the given {@link Appendable} is {@literal null} or if the
 	 *             given {@link Indentation} is {@literal null}.
 	 */
-	public JavaTextJsonHandler() {
-		super(new StringBuilder());
+	public JavaTextJsonHandler(Indentation indentation) {
+		super(new StringBuilder(), indentation);
 	}
 
 	@Override

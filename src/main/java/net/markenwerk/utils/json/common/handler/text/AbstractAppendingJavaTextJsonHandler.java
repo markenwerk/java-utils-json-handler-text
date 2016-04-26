@@ -27,6 +27,7 @@ import net.markenwerk.utils.json.common.InvalidJsonValueException;
 import net.markenwerk.utils.json.handler.IdleJsonHandler;
 import net.markenwerk.utils.json.handler.JsonHandler;
 import net.markenwerk.utils.json.handler.JsonHandlingException;
+import net.markenwerk.utils.text.indentation.Indentation;
 
 /**
  * A {@link AbstractAppendingJavaTextJsonHandler} is a {@link JsonHandler} that
@@ -47,18 +48,31 @@ public abstract class AbstractAppendingJavaTextJsonHandler<ActualAppendable exte
 
 	private final ActualAppendable appendable;
 
+	private final Indentation indentation;
+
+	private int depth;
+
+	private boolean indented = true;
+
+	private boolean empty;
+
 	/**
 	 * Creates a new {@link AbstractAppendingJavaTextJsonHandler}.
 	 * 
 	 * @param appendable
 	 *            The {@link Appendable} to be used.
+	 * @param indentation
+	 *            The {@link Indentation} to be used.
 	 */
-	public AbstractAppendingJavaTextJsonHandler(ActualAppendable appendable) {
+	public AbstractAppendingJavaTextJsonHandler(ActualAppendable appendable, Indentation indentation) {
 		if (null == appendable) {
 			throw new IllegalArgumentException("writer is null");
 		}
-
+		if (null == indentation) {
+			throw new IllegalArgumentException("indentation is null");
+		}
 		this.appendable = appendable;
+		this.indentation = indentation;
 	}
 
 	/**
@@ -83,60 +97,95 @@ public abstract class AbstractAppendingJavaTextJsonHandler<ActualAppendable exte
 
 	@Override
 	public final void onArrayBegin() throws JsonHandlingException {
+		writeIndentation();
 		append("[");
+		depth++;
+		empty = true;
 	}
 
 	@Override
 	public final void onArrayEnd() throws JsonHandlingException {
+		depth--;
+		if (!empty) {
+			writeIndentation();
+		}
+		empty = false;
 		append("]");
 	}
 
 	@Override
 	public final void onObjectBegin() throws JsonHandlingException {
+		writeIndentation();
 		append("{");
+		depth++;
+		empty = true;
 	}
 
 	@Override
 	public final void onObjectEnd() throws JsonHandlingException {
+		depth--;
+		if (!empty) {
+			writeIndentation();
+		}
+		empty = false;
 		append("}");
 	}
 
 	@Override
 	public final void onName(String name) throws JsonHandlingException {
+		append(indentation.get(depth, true));
+		indented = true;
 		append(name);
 		append("=");
 	}
 
 	@Override
 	public final void onNext() throws JsonHandlingException {
-		append(", ");
+		if ("".equals(indentation.getLineBreak())) {
+			append(", ");
+		} else {
+			append(",");
+		}
 	}
 
 	@Override
 	public final void onNull() throws JsonHandlingException {
+		writeIndentation();
 		append("null");
 	}
 
 	@Override
 	public final void onBoolean(boolean value) throws JsonHandlingException {
+		writeIndentation();
 		append(value ? "true" : "false");
 	}
 
 	@Override
 	public final void onLong(long value) throws JsonHandlingException {
+		writeIndentation();
 		append(Long.toString(value));
 	}
 
 	@Override
 	public final void onDouble(double value) throws InvalidJsonValueException, JsonHandlingException {
 		checkDoubleValue(value);
+		writeIndentation();
 		append(Double.toString(value));
 	}
 
 	@Override
 	public final void onString(String value) throws JsonHandlingException {
 		checkStringValue(value);
+		writeIndentation();
 		append(value);
+	}
+
+	private final void writeIndentation() throws JsonHandlingException {
+		if (!indented) {
+			append(indentation.get(depth, true));
+		}
+		indented = false;
+		empty = false;
 	}
 
 	private final void append(String string) throws JsonHandlingException {

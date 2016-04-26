@@ -36,14 +36,14 @@ import net.markenwerk.utils.text.indentation.Indentation;
  * 
  * 
  * @param <ActualAppendable>
- *           The actual {@link Appendable} type.
+ *            The actual {@link Appendable} type.
  * @param <Result>
- *           The result type.
+ *            The result type.
  * @author Torsten Krause (tk at markenwerk dot net)
  * @since 1.0.0
  */
-public abstract class AbstractAppendingJsonTextJsonHandler<ActualAppendable extends Appendable, Result>
-		extends IdleJsonHandler<Result> {
+public abstract class AbstractAppendingJsonTextJsonHandler<ActualAppendable extends Appendable, Result> extends
+		IdleJsonHandler<Result> {
 
 	private final ActualAppendable appendable;
 
@@ -59,9 +59,9 @@ public abstract class AbstractAppendingJsonTextJsonHandler<ActualAppendable exte
 	 * Creates a new {@link AbstractAppendingJsonTextJsonHandler}.
 	 * 
 	 * @param appendable
-	 *           The {@link Appendable} to be used.
+	 *            The {@link Appendable} to be used.
 	 * @param indentation
-	 *           The {@link Indentation} to be used.
+	 *            The {@link Indentation} to be used.
 	 */
 	public AbstractAppendingJsonTextJsonHandler(ActualAppendable appendable, Indentation indentation) {
 		if (null == appendable) {
