@@ -21,7 +21,7 @@
  */
 package net.markenwerk.utils.json.common.handler.text;
 
-import net.markenwerk.utils.json.handler.JsonHandlingException;
+import net.markenwerk.utils.json.common.FailedJsonOperationException;
 import net.markenwerk.utils.text.indentation.Indentation;
 
 /**
@@ -40,7 +40,7 @@ public final class AppendingJsonTextJsonHandler extends AbstractAppendingJsonTex
 	 * {@link Indentation#DEFAULT default} {@link Indentation}.
 	 * 
 	 * @param appendable
-	 *           The {@link Appendable} to be used.
+	 *            The {@link Appendable} to be used.
 	 */
 	public AppendingJsonTextJsonHandler(Appendable appendable) {
 		this(appendable, Indentation.DEFAULT);
@@ -50,16 +50,16 @@ public final class AppendingJsonTextJsonHandler extends AbstractAppendingJsonTex
 	 * Creates a new {@link AppendingJsonTextJsonHandler}.
 	 * 
 	 * @param appendable
-	 *           The {@link Appendable} to be used.
+	 *            The {@link Appendable} to be used.
 	 * @param indentation
-	 *           The {@link Indentation} to be used.
+	 *            The {@link Indentation} to be used.
 	 */
 	public AppendingJsonTextJsonHandler(Appendable appendable, Indentation indentation) {
 		super(appendable, indentation);
 	}
 
 	@Override
-	public Void getResult() throws JsonHandlingException {
+	public Void getResult() throws FailedJsonOperationException {
 		return null;
 	}
 

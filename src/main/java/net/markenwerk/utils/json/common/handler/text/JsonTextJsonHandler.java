@@ -21,7 +21,7 @@
  */
 package net.markenwerk.utils.json.common.handler.text;
 
-import net.markenwerk.utils.json.handler.JsonHandlingException;
+import net.markenwerk.utils.json.common.FailedJsonOperationException;
 import net.markenwerk.utils.text.indentation.Indentation;
 
 /**
@@ -61,7 +61,7 @@ public final class JsonTextJsonHandler extends AbstractAppendingJsonTextJsonHand
 	}
 
 	@Override
-	public String getResult() throws JsonHandlingException {
+	public String getResult() throws FailedJsonOperationException {
 		return getAppendable().toString();
 	}
 

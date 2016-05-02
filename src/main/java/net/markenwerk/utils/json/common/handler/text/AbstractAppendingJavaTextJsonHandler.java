@@ -23,11 +23,11 @@ package net.markenwerk.utils.json.common.handler.text;
 
 import java.io.IOException;
 
+import net.markenwerk.utils.json.common.FailedJsonOperationException;
 import net.markenwerk.utils.json.common.InvalidJsonNameException;
 import net.markenwerk.utils.json.common.InvalidJsonValueException;
 import net.markenwerk.utils.json.handler.IdleJsonHandler;
 import net.markenwerk.utils.json.handler.JsonHandler;
-import net.markenwerk.utils.json.handler.JsonHandlingException;
 import net.markenwerk.utils.text.indentation.Indentation;
 
 /**
@@ -97,7 +97,7 @@ public abstract class AbstractAppendingJavaTextJsonHandler<ActualAppendable exte
 	}
 
 	@Override
-	public final void onArrayBegin() throws JsonHandlingException {
+	public final void onArrayBegin() throws FailedJsonOperationException {
 		writeIndentation();
 		append("[");
 		depth++;
@@ -105,7 +105,7 @@ public abstract class AbstractAppendingJavaTextJsonHandler<ActualAppendable exte
 	}
 
 	@Override
-	public final void onArrayEnd() throws JsonHandlingException {
+	public final void onArrayEnd() throws FailedJsonOperationException {
 		depth--;
 		if (!empty) {
 			writeIndentation();
@@ -115,7 +115,7 @@ public abstract class AbstractAppendingJavaTextJsonHandler<ActualAppendable exte
 	}
 
 	@Override
-	public final void onObjectBegin() throws JsonHandlingException {
+	public final void onObjectBegin() throws FailedJsonOperationException {
 		writeIndentation();
 		append("{");
 		depth++;
@@ -123,7 +123,7 @@ public abstract class AbstractAppendingJavaTextJsonHandler<ActualAppendable exte
 	}
 
 	@Override
-	public final void onObjectEnd() throws JsonHandlingException {
+	public final void onObjectEnd() throws FailedJsonOperationException {
 		depth--;
 		if (!empty) {
 			writeIndentation();
@@ -133,7 +133,7 @@ public abstract class AbstractAppendingJavaTextJsonHandler<ActualAppendable exte
 	}
 
 	@Override
-	public final void onName(String name) throws InvalidJsonNameException, JsonHandlingException {
+	public final void onName(String name) throws InvalidJsonNameException, FailedJsonOperationException {
 		checkName(name);
 		append(indentation.get(depth, true));
 		indented = true;
@@ -142,7 +142,7 @@ public abstract class AbstractAppendingJavaTextJsonHandler<ActualAppendable exte
 	}
 
 	@Override
-	public final void onNext() throws JsonHandlingException {
+	public final void onNext() throws FailedJsonOperationException {
 		if ("".equals(indentation.getLineBreak())) {
 			append(", ");
 		} else {
@@ -151,38 +151,38 @@ public abstract class AbstractAppendingJavaTextJsonHandler<ActualAppendable exte
 	}
 
 	@Override
-	public final void onNull() throws JsonHandlingException {
+	public final void onNull() throws FailedJsonOperationException {
 		writeIndentation();
 		append("null");
 	}
 
 	@Override
-	public final void onBoolean(boolean value) throws JsonHandlingException {
+	public final void onBoolean(boolean value) throws FailedJsonOperationException {
 		writeIndentation();
 		append(value ? "true" : "false");
 	}
 
 	@Override
-	public final void onLong(long value) throws JsonHandlingException {
+	public final void onLong(long value) throws FailedJsonOperationException {
 		writeIndentation();
 		append(Long.toString(value));
 	}
 
 	@Override
-	public final void onDouble(double value) throws InvalidJsonValueException, JsonHandlingException {
+	public final void onDouble(double value) throws InvalidJsonValueException, FailedJsonOperationException {
 		checkDouble(value);
 		writeIndentation();
 		append(Double.toString(value));
 	}
 
 	@Override
-	public final void onString(String value) throws InvalidJsonValueException, JsonHandlingException {
+	public final void onString(String value) throws InvalidJsonValueException, FailedJsonOperationException {
 		checkString(value);
 		writeIndentation();
 		append(value);
 	}
 
-	private final void writeIndentation() throws JsonHandlingException {
+	private final void writeIndentation() throws FailedJsonOperationException {
 		if (!indented) {
 			append(indentation.get(depth, true));
 		}
@@ -190,11 +190,11 @@ public abstract class AbstractAppendingJavaTextJsonHandler<ActualAppendable exte
 		empty = false;
 	}
 
-	private final void append(String string) throws JsonHandlingException {
+	private final void append(String string) throws FailedJsonOperationException {
 		try {
 			appendable.append(string);
 		} catch (IOException e) {
-			throw new JsonHandlingException(e);
+			throw new FailedJsonOperationException(e);
 		}
 	}
 
