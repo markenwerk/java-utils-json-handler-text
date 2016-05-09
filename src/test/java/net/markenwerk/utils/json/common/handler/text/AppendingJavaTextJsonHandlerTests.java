@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import net.markenwerk.utils.json.common.InvalidJsonValueException;
+import net.markenwerk.utils.json.common.JsonValueException;
 import net.markenwerk.utils.json.handler.JsonHandler;
 import net.markenwerk.utils.text.indentation.Indentation;
 import net.markenwerk.utils.text.indentation.LineBreak;
@@ -127,7 +127,7 @@ public class AppendingJavaTextJsonHandlerTests {
 
 	}
 
-	@Test(expected = InvalidJsonValueException.class)
+	@Test(expected = JsonValueException.class)
 	public void onDouble_infinite() {
 
 		JsonHandler<Void> handler = new AppendingJavaTextJsonHandler(builder);
@@ -138,7 +138,7 @@ public class AppendingJavaTextJsonHandlerTests {
 
 	}
 
-	@Test(expected = InvalidJsonValueException.class)
+	@Test(expected = JsonValueException.class)
 	public void onDouble_notANumber() {
 
 		JsonHandler<Void> handler = new AppendingJavaTextJsonHandler(builder);
@@ -194,7 +194,7 @@ public class AppendingJavaTextJsonHandlerTests {
 
 	}
 
-	@Test(expected = InvalidJsonValueException.class)
+	@Test(expected = JsonValueException.class)
 	public void onString_null() {
 
 		JsonHandler<Void> handler = new AppendingJavaTextJsonHandler(builder);
