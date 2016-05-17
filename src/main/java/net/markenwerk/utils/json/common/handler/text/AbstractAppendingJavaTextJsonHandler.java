@@ -68,10 +68,10 @@ public abstract class AbstractAppendingJavaTextJsonHandler<ActualAppendable exte
 	 */
 	public AbstractAppendingJavaTextJsonHandler(ActualAppendable appendable, Indentation indentation) {
 		if (null == appendable) {
-			throw new IllegalArgumentException("writer is null");
+			throw new IllegalArgumentException("The given writer is null");
 		}
 		if (null == indentation) {
-			throw new IllegalArgumentException("indentation is null");
+			throw new IllegalArgumentException("The given indentation is null");
 		}
 		this.appendable = appendable;
 		this.indentation = indentation;
