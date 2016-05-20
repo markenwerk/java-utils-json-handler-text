@@ -198,7 +198,7 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/common/handler/t
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;net.markenwerk.utils.json.handler.<a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html" title="class in net.markenwerk.utils.json.handler">IdleJsonHandler</a></h3>
-<code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#checkDoubleValue-double-">checkDoubleValue</a>, <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#checkStringValue-java.lang.String-">checkStringValue</a></code></li>
+<code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#checkDouble-double-">checkDouble</a>, <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#checkName-java.lang.String-">checkName</a>, <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#checkString-java.lang.String-">checkString</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -267,13 +267,14 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/common/handler/t
 <li class="blockList">
 <h4>getResult</h4>
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Void.html?is-external=true" title="class or interface in java.lang">Void</a>&nbsp;getResult()
-               throws <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></pre>
+               throws <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#getResult--">JsonHandler</a></code></span></div>
 <div class="block">Returns the calculated result.
  
  <p>
- Implementers should catch any exception and wrap them in a
- <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>.</div>
+ Implementers should catch any exception that isn't a
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> and wrap them in an appropriate
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> (e.g. a <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#getResult--">getResult</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler">JsonHandler</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Void.html?is-external=true" title="class or interface in java.lang">Void</a>&gt;</code></dd>
@@ -282,7 +283,7 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/common/handler/t
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The calculated result.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></code> - If the handling failed.</dd>
+<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></code> - If the handling failed.</dd>
 </dl>
 </li>
 </ul>

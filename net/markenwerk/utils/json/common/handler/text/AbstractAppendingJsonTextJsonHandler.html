@@ -271,7 +271,7 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;net.markenwerk.utils.json.handler.<a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html" title="class in net.markenwerk.utils.json.handler">IdleJsonHandler</a></h3>
-<code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#checkDoubleValue-double-">checkDoubleValue</a>, <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#checkStringValue-java.lang.String-">checkStringValue</a>, <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#getResult--">getResult</a></code></li>
+<code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#checkDouble-double-">checkDouble</a>, <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#checkName-java.lang.String-">checkName</a>, <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#checkString-java.lang.String-">checkString</a>, <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#getResult--">getResult</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -348,8 +348,9 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <div class="block">Called when the parsing of a JSON document started.
  
  <p>
- Implementers should catch any exception and wrap them in a
- <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>.</div>
+ Implementers should catch any exception that isn't a
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> and wrap them in an appropriate
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> (e.g. a <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onDocumentBegin--">onDocumentBegin</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler">JsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
@@ -369,8 +370,9 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <div class="block">Called when the parsing of a JSON document ended.
  
  <p>
- Implementers should catch any exception and wrap them in a
- <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>.</div>
+ Implementers should catch any exception that isn't a
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> and wrap them in an appropriate
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> (e.g. a <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onDocumentEnd--">onDocumentEnd</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler">JsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
@@ -386,21 +388,22 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <li class="blockList">
 <h4>onArrayBegin</h4>
 <pre>public final&nbsp;void&nbsp;onArrayBegin()
-                        throws <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></pre>
+                        throws <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onArrayBegin--">JsonHandler</a></code></span></div>
 <div class="block">Called when the parsing of a JSON array started. A corresponding call for
  the <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onArrayEnd--"><code>end</code></a> must eventually be called.
  
  <p>
- Implementers should catch any exception and wrap them in a
- <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>.</div>
+ Implementers should catch any exception that isn't a
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> and wrap them in an appropriate
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> (e.g. a <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onArrayBegin--">onArrayBegin</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler">JsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#onArrayBegin--">onArrayBegin</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html" title="class in net.markenwerk.utils.json.handler">IdleJsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></code> - If the handling failed.</dd>
+<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></code> - If the handling failed.</dd>
 </dl>
 </li>
 </ul>
@@ -411,20 +414,21 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <li class="blockList">
 <h4>onArrayEnd</h4>
 <pre>public final&nbsp;void&nbsp;onArrayEnd()
-                      throws <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></pre>
+                      throws <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onArrayEnd--">JsonHandler</a></code></span></div>
 <div class="block">Called when the parsing of a JSON array ended.
  
  <p>
- Implementers should catch any exception and wrap them in a
- <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>.</div>
+ Implementers should catch any exception that isn't a
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> and wrap them in an appropriate
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> (e.g. a <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onArrayEnd--">onArrayEnd</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler">JsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#onArrayEnd--">onArrayEnd</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html" title="class in net.markenwerk.utils.json.handler">IdleJsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></code> - If the handling failed.</dd>
+<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></code> - If the handling failed.</dd>
 </dl>
 </li>
 </ul>
@@ -435,21 +439,22 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <li class="blockList">
 <h4>onObjectBegin</h4>
 <pre>public final&nbsp;void&nbsp;onObjectBegin()
-                         throws <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></pre>
+                         throws <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onObjectBegin--">JsonHandler</a></code></span></div>
 <div class="block">Called when the parsing of a JSON object started. A corresponding call
  for the <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onObjectEnd--"><code>end</code></a> must eventually be called.
  
  <p>
- Implementers should catch any exception and wrap them in a
- <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>.</div>
+ Implementers should catch any exception that isn't a
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> and wrap them in an appropriate
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> (e.g. a <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onObjectBegin--">onObjectBegin</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler">JsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#onObjectBegin--">onObjectBegin</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html" title="class in net.markenwerk.utils.json.handler">IdleJsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></code> - If the handling failed.</dd>
+<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></code> - If the handling failed.</dd>
 </dl>
 </li>
 </ul>
@@ -460,20 +465,21 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <li class="blockList">
 <h4>onObjectEnd</h4>
 <pre>public final&nbsp;void&nbsp;onObjectEnd()
-                       throws <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></pre>
+                       throws <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onObjectEnd--">JsonHandler</a></code></span></div>
 <div class="block">Called when the parsing of a JSON object ended.
  
  <p>
- Implementers should catch any exception and wrap them in a
- <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>.</div>
+ Implementers should catch any exception that isn't a
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> and wrap them in an appropriate
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> (e.g. a <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onObjectEnd--">onObjectEnd</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler">JsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#onObjectEnd--">onObjectEnd</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html" title="class in net.markenwerk.utils.json.handler">IdleJsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></code> - If the handling failed.</dd>
+<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></code> - If the handling failed.</dd>
 </dl>
 </li>
 </ul>
@@ -484,14 +490,16 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <li class="blockList">
 <h4>onName</h4>
 <pre>public final&nbsp;void&nbsp;onName(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
-                  throws <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></pre>
+                  throws <a href="../../../../../../../net/markenwerk/utils/json/common/JsonIndexException.html" title="class in net.markenwerk.utils.json.common">JsonIndexException</a>,
+                         <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onName-java.lang.String-">JsonHandler</a></code></span></div>
 <div class="block">Called when the parsing of a JSON object encountered the name for the
  next JSON value.
  
  <p>
- Implementers should catch any exception and wrap them in a
- <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>.</div>
+ Implementers should catch any exception that isn't a
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> and wrap them in an appropriate
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> (e.g. a <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onName-java.lang.String-">onName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler">JsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
@@ -500,7 +508,8 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - The name for the next JSON value.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></code> - If the handling failed.</dd>
+<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/JsonIndexException.html" title="class in net.markenwerk.utils.json.common">JsonIndexException</a></code> - If the given value is null.</dd>
+<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></code> - If the handling failed.</dd>
 </dl>
 </li>
 </ul>
@@ -511,21 +520,22 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <li class="blockList">
 <h4>onNext</h4>
 <pre>public final&nbsp;void&nbsp;onNext()
-                  throws <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></pre>
+                  throws <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onNext--">JsonHandler</a></code></span></div>
 <div class="block">Called when the parsing of a JSON array or JSON object encountered
  another element.
  
  <p>
- Implementers should catch any exception and wrap them in a
- <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>.</div>
+ Implementers should catch any exception that isn't a
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> and wrap them in an appropriate
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> (e.g. a <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onNext--">onNext</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler">JsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#onNext--">onNext</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html" title="class in net.markenwerk.utils.json.handler">IdleJsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></code> - If the handling failed.</dd>
+<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></code> - If the handling failed.</dd>
 </dl>
 </li>
 </ul>
@@ -536,20 +546,21 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <li class="blockList">
 <h4>onNull</h4>
 <pre>public final&nbsp;void&nbsp;onNull()
-                  throws <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></pre>
+                  throws <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onNull--">JsonHandler</a></code></span></div>
 <div class="block">Called when the parsing of a JSON object encountered a JSON null.
  
  <p>
- Implementers should catch any exception and wrap them in a
- <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>.</div>
+ Implementers should catch any exception that isn't a
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> and wrap them in an appropriate
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> (e.g. a <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onNull--">onNull</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler">JsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html#onNull--">onNull</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJsonHandler.html" title="class in net.markenwerk.utils.json.handler">IdleJsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></code> - If the handling failed.</dd>
+<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></code> - If the handling failed.</dd>
 </dl>
 </li>
 </ul>
@@ -560,13 +571,14 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <li class="blockList">
 <h4>onBoolean</h4>
 <pre>public final&nbsp;void&nbsp;onBoolean(boolean&nbsp;value)
-                     throws <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></pre>
+                     throws <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onBoolean-boolean-">JsonHandler</a></code></span></div>
 <div class="block">Called when the parsing of a JSON object encountered a JSON boolean.
  
  <p>
- Implementers should catch any exception and wrap them in a
- <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>.</div>
+ Implementers should catch any exception that isn't a
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> and wrap them in an appropriate
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> (e.g. a <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onBoolean-boolean-">onBoolean</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler">JsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
@@ -575,7 +587,7 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>value</code> - The value of the JSON boolean.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></code> - If the handling failed.</dd>
+<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></code> - If the handling failed.</dd>
 </dl>
 </li>
 </ul>
@@ -586,14 +598,15 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <li class="blockList">
 <h4>onLong</h4>
 <pre>public final&nbsp;void&nbsp;onLong(long&nbsp;value)
-                  throws <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></pre>
+                  throws <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onLong-long-">JsonHandler</a></code></span></div>
 <div class="block">Called when the parsing of a JSON object encountered a JSON number, that
  represents an integer value.
  
  <p>
- Implementers should catch any exception and wrap them in a
- <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>.</div>
+ Implementers should catch any exception that isn't a
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> and wrap them in an appropriate
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> (e.g. a <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onLong-long-">onLong</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler">JsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
@@ -602,7 +615,7 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>value</code> - The value of the JSON number.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></code> - If the handling failed.</dd>
+<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></code> - If the handling failed.</dd>
 </dl>
 </li>
 </ul>
@@ -613,15 +626,16 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <li class="blockList">
 <h4>onDouble</h4>
 <pre>public final&nbsp;void&nbsp;onDouble(double&nbsp;value)
-                    throws <a href="../../../../../../../net/markenwerk/utils/json/common/InvalidJsonValueException.html" title="class in net.markenwerk.utils.json.common">InvalidJsonValueException</a>,
-                           <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></pre>
+                    throws <a href="../../../../../../../net/markenwerk/utils/json/common/JsonValueException.html" title="class in net.markenwerk.utils.json.common">JsonValueException</a>,
+                           <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onDouble-double-">JsonHandler</a></code></span></div>
 <div class="block">Called when the parsing of a JSON object encountered a JSON number, that
  represents a decimal value.
  
  <p>
- Implementers should catch any exception and wrap them in a
- <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>.</div>
+ Implementers should catch any exception that isn't a
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> and wrap them in an appropriate
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> (e.g. a <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onDouble-double-">onDouble</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler">JsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
@@ -630,9 +644,9 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>value</code> - The value of the JSON number.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/InvalidJsonValueException.html" title="class in net.markenwerk.utils.json.common">InvalidJsonValueException</a></code> - If the given value is <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true#isNaN-double-" title="class or interface in java.lang"><code>not a
+<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/JsonValueException.html" title="class in net.markenwerk.utils.json.common">JsonValueException</a></code> - If the given value is <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true#isNaN-double-" title="class or interface in java.lang"><code>not a
              number</code></a> or <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true#isInfinite-double-" title="class or interface in java.lang"><code>infinite</code></a>.</dd>
-<dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></code> - If the handling failed.</dd>
+<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></code> - If the handling failed.</dd>
 </dl>
 </li>
 </ul>
@@ -643,13 +657,15 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <li class="blockList">
 <h4>onString</h4>
 <pre>public final&nbsp;void&nbsp;onString(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)
-                    throws <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></pre>
+                    throws <a href="../../../../../../../net/markenwerk/utils/json/common/JsonValueException.html" title="class in net.markenwerk.utils.json.common">JsonValueException</a>,
+                           <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onString-java.lang.String-">JsonHandler</a></code></span></div>
 <div class="block">Called when the parsing of a JSON object encountered a JSON string.
  
  <p>
- Implementers should catch any exception and wrap them in a
- <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>.</div>
+ Implementers should catch any exception that isn't a
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> and wrap them in an appropriate
+ <a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> (e.g. a <a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a>).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html#onString-java.lang.String-">onString</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler">JsonHandler</a>&lt;<a href="../../../../../../../net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="type parameter in AbstractAppendingJsonTextJsonHandler">Result</a>&gt;</code></dd>
@@ -658,7 +674,8 @@ extends <a href="../../../../../../../net/markenwerk/utils/json/handler/IdleJson
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>value</code> - The value of the JSON string.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></code> - If the handling failed.</dd>
+<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/JsonValueException.html" title="class in net.markenwerk.utils.json.common">JsonValueException</a></code> - If the given value is null.</dd>
+<dd><code><a href="../../../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common">JsonException</a></code> - If the handling failed.</dd>
 </dl>
 </li>
 </ul>

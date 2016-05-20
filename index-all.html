@@ -69,7 +69,7 @@
 <!--   -->
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
-<div class="contentContainer"><a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:J">J</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;<a name="I:A">
+<div class="contentContainer"><a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:J">J</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;<a name="I:A">
 <!--   -->
 </a>
 <h2 class="title">A</h2>
@@ -168,11 +168,15 @@
 </a>
 <h2 class="title">C</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/handler/IdleJsonHandler.html#checkDoubleValue-double-">checkDoubleValue(double)</a></span> - Method in class net.markenwerk.utils.json.handler.<a href="net/markenwerk/utils/json/handler/IdleJsonHandler.html" title="class in net.markenwerk.utils.json.handler">IdleJsonHandler</a></dt>
+<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/handler/IdleJsonHandler.html#checkDouble-double-">checkDouble(double)</a></span> - Static method in class net.markenwerk.utils.json.handler.<a href="net/markenwerk/utils/json/handler/IdleJsonHandler.html" title="class in net.markenwerk.utils.json.handler">IdleJsonHandler</a></dt>
 <dd>
 <div class="block">Checks that a double value is a valid JSON number.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/handler/IdleJsonHandler.html#checkStringValue-java.lang.String-">checkStringValue(String)</a></span> - Method in class net.markenwerk.utils.json.handler.<a href="net/markenwerk/utils/json/handler/IdleJsonHandler.html" title="class in net.markenwerk.utils.json.handler">IdleJsonHandler</a></dt>
+<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/handler/IdleJsonHandler.html#checkName-java.lang.String-">checkName(String)</a></span> - Static method in class net.markenwerk.utils.json.handler.<a href="net/markenwerk/utils/json/handler/IdleJsonHandler.html" title="class in net.markenwerk.utils.json.handler">IdleJsonHandler</a></dt>
+<dd>
+<div class="block">Checks that a <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> value is a valid JSON name.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/handler/IdleJsonHandler.html#checkString-java.lang.String-">checkString(String)</a></span> - Static method in class net.markenwerk.utils.json.handler.<a href="net/markenwerk/utils/json/handler/IdleJsonHandler.html" title="class in net.markenwerk.utils.json.handler">IdleJsonHandler</a></dt>
 <dd>
 <div class="block">Checks that a <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> value is a valid JSON string.</div>
 </dd>
@@ -224,32 +228,6 @@
 <div class="block">Returns the <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Appendable.html?is-external=true" title="class or interface in java.lang"><code>Appendable</code></a> this
  <a href="net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="class in net.markenwerk.utils.json.common.handler.text"><code>AbstractAppendingJsonTextJsonHandler</code></a> has been created with.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonSyntaxException.html#getColumn--">getColumn()</a></span> - Method in exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonSyntaxException.html" title="class in net.markenwerk.utils.json.common">JsonSyntaxException</a></dt>
-<dd>
-<div class="block">Returns the column in the JSON document, where the syntax error occurred.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonSyntaxError.html#getDescription--">getDescription()</a></span> - Method in enum net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonSyntaxError.html" title="enum in net.markenwerk.utils.json.common">JsonSyntaxError</a></dt>
-<dd>
-<div class="block">Returns a description of this <a href="net/markenwerk/utils/json/common/JsonSyntaxError.html" title="enum in net.markenwerk.utils.json.common"><code>JsonSyntaxError</code></a>.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonSyntaxException.html#getError--">getError()</a></span> - Method in exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonSyntaxException.html" title="class in net.markenwerk.utils.json.common">JsonSyntaxException</a></dt>
-<dd>
-<div class="block">Returns the syntax error.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonSyntaxError.html#getExpectation--">getExpectation()</a></span> - Method in enum net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonSyntaxError.html" title="enum in net.markenwerk.utils.json.common">JsonSyntaxError</a></dt>
-<dd>
-<div class="block">Returns a description of an unfulfilled expectation, that caused this
- <a href="net/markenwerk/utils/json/common/JsonSyntaxError.html" title="enum in net.markenwerk.utils.json.common"><code>JsonSyntaxError</code></a>.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonSyntaxException.html#getFuture--">getFuture()</a></span> - Method in exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonSyntaxException.html" title="class in net.markenwerk.utils.json.common">JsonSyntaxException</a></dt>
-<dd>
-<div class="block">Returns a few characters from the parsed character stream, that come
- after the syntax error, if already cached.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonSyntaxException.html#getLine--">getLine()</a></span> - Method in exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonSyntaxException.html" title="class in net.markenwerk.utils.json.common">JsonSyntaxException</a></dt>
-<dd>
-<div class="block">Returns the line in the JSON document, where the syntax error occurred.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="net/markenwerk/utils/text/indentation/AbstractIndentation.html#getLineBreak--">getLineBreak()</a></span> - Method in class net.markenwerk.utils.text.indentation.<a href="net/markenwerk/utils/text/indentation/AbstractIndentation.html" title="class in net.markenwerk.utils.text.indentation">AbstractIndentation</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="net/markenwerk/utils/text/indentation/Indentation.html#getLineBreak--">getLineBreak()</a></span> - Method in interface net.markenwerk.utils.text.indentation.<a href="net/markenwerk/utils/text/indentation/Indentation.html" title="interface in net.markenwerk.utils.text.indentation">Indentation</a></dt>
@@ -261,13 +239,6 @@
 <dt><span class="memberNameLink"><a href="net/markenwerk/utils/text/indentation/LineBreak.html#getLineBreakString--">getLineBreakString()</a></span> - Method in enum net.markenwerk.utils.text.indentation.<a href="net/markenwerk/utils/text/indentation/LineBreak.html" title="enum in net.markenwerk.utils.text.indentation">LineBreak</a></dt>
 <dd>
 <div class="block">Returns the line break string of this <a href="net/markenwerk/utils/text/indentation/LineBreak.html" title="enum in net.markenwerk.utils.text.indentation"><code>LineBreak</code></a>;</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonSyntaxException.html#getMessage--">getMessage()</a></span> - Method in exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonSyntaxException.html" title="class in net.markenwerk.utils.json.common">JsonSyntaxException</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonSyntaxException.html#getPast--">getPast()</a></span> - Method in exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonSyntaxException.html" title="class in net.markenwerk.utils.json.common">JsonSyntaxException</a></dt>
-<dd>
-<div class="block">Returns a few characters from the parsed character stream, that came
- before the syntax error, if still cached.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/handler/text/AppendingJavaTextJsonHandler.html#getResult--">getResult()</a></span> - Method in class net.markenwerk.utils.json.common.handler.text.<a href="net/markenwerk/utils/json/common/handler/text/AppendingJavaTextJsonHandler.html" title="class in net.markenwerk.utils.json.common.handler.text">AppendingJavaTextJsonHandler</a></dt>
 <dd>&nbsp;</dd>
@@ -303,42 +274,6 @@
 <dd>
 <div class="block">An <a href="net/markenwerk/utils/text/indentation/Indentation.html" title="interface in net.markenwerk.utils.text.indentation"><code>Indentation</code></a> represents all strings necessary to perform consistent
  indentation of structured strings.</div>
-</dd>
-<dt><a href="net/markenwerk/utils/json/common/InvalidJsonIndexException.html" title="class in net.markenwerk.utils.json.common"><span class="typeNameLink">InvalidJsonIndexException</span></a> - Exception in <a href="net/markenwerk/utils/json/common/package-summary.html">net.markenwerk.utils.json.common</a></dt>
-<dd>
-<div class="block">A <a href="net/markenwerk/utils/json/common/InvalidJsonIndexException.html" title="class in net.markenwerk.utils.json.common"><code>InvalidJsonIndexException</code></a> is a <a href="net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> indicates that
- a given index value is not valid for a given JSON structure.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/InvalidJsonIndexException.html#InvalidJsonIndexException-java.lang.String-java.lang.Throwable-">InvalidJsonIndexException(String, Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/InvalidJsonIndexException.html" title="class in net.markenwerk.utils.json.common">InvalidJsonIndexException</a></dt>
-<dd>
-<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/InvalidJsonIndexException.html" title="class in net.markenwerk.utils.json.common"><code>InvalidJsonIndexException</code></a> with the given message
- and cause.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/InvalidJsonIndexException.html#InvalidJsonIndexException-java.lang.String-">InvalidJsonIndexException(String)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/InvalidJsonIndexException.html" title="class in net.markenwerk.utils.json.common">InvalidJsonIndexException</a></dt>
-<dd>
-<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/InvalidJsonIndexException.html" title="class in net.markenwerk.utils.json.common"><code>InvalidJsonIndexException</code></a> with the given message.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/InvalidJsonIndexException.html#InvalidJsonIndexException-java.lang.Throwable-">InvalidJsonIndexException(Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/InvalidJsonIndexException.html" title="class in net.markenwerk.utils.json.common">InvalidJsonIndexException</a></dt>
-<dd>
-<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/InvalidJsonIndexException.html" title="class in net.markenwerk.utils.json.common"><code>InvalidJsonIndexException</code></a> with the given cause.</div>
-</dd>
-<dt><a href="net/markenwerk/utils/json/common/InvalidJsonValueException.html" title="class in net.markenwerk.utils.json.common"><span class="typeNameLink">InvalidJsonValueException</span></a> - Exception in <a href="net/markenwerk/utils/json/common/package-summary.html">net.markenwerk.utils.json.common</a></dt>
-<dd>
-<div class="block">A <a href="net/markenwerk/utils/json/common/InvalidJsonValueException.html" title="class in net.markenwerk.utils.json.common"><code>InvalidJsonValueException</code></a> is a <a href="net/markenwerk/utils/json/common/JsonValueException.html" title="class in net.markenwerk.utils.json.common"><code>JsonValueException</code></a> indicates that
- a JSON value couldn't be processed or failed to fulfill a constraint.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/InvalidJsonValueException.html#InvalidJsonValueException-java.lang.String-java.lang.Throwable-">InvalidJsonValueException(String, Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/InvalidJsonValueException.html" title="class in net.markenwerk.utils.json.common">InvalidJsonValueException</a></dt>
-<dd>
-<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/InvalidJsonValueException.html" title="class in net.markenwerk.utils.json.common"><code>InvalidJsonValueException</code></a> with the given message
- and cause.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/InvalidJsonValueException.html#InvalidJsonValueException-java.lang.String-">InvalidJsonValueException(String)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/InvalidJsonValueException.html" title="class in net.markenwerk.utils.json.common">InvalidJsonValueException</a></dt>
-<dd>
-<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/InvalidJsonValueException.html" title="class in net.markenwerk.utils.json.common"><code>InvalidJsonValueException</code></a> with the given message.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/InvalidJsonValueException.html#InvalidJsonValueException-java.lang.Throwable-">InvalidJsonValueException(Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/InvalidJsonValueException.html" title="class in net.markenwerk.utils.json.common">InvalidJsonValueException</a></dt>
-<dd>
-<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/InvalidJsonValueException.html" title="class in net.markenwerk.utils.json.common"><code>InvalidJsonValueException</code></a> with the given cause.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/markenwerk/utils/text/indentation/Indentation.html#INVISIBLE">INVISIBLE</a></span> - Static variable in interface net.markenwerk.utils.text.indentation.<a href="net/markenwerk/utils/text/indentation/Indentation.html" title="interface in net.markenwerk.utils.text.indentation">Indentation</a></dt>
 <dd>
@@ -411,45 +346,87 @@
 <dt><a href="net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler"><span class="typeNameLink">JsonHandler</span></a>&lt;<a href="net/markenwerk/utils/json/handler/JsonHandler.html" title="type parameter in JsonHandler">Result</a>&gt; - Interface in <a href="net/markenwerk/utils/json/handler/package-summary.html">net.markenwerk.utils.json.handler</a></dt>
 <dd>
 <div class="block">A <a href="net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler"><code>JsonHandler</code></a> provides a collection of callback methods that can be
- called to describe a JSON document and calculates a result for the described
- JSON document.</div>
+ called for a sequence of events that describe a JSON document.</div>
 </dd>
 <dt><a href="net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><span class="typeNameLink">JsonHandlingException</span></a> - Exception in <a href="net/markenwerk/utils/json/handler/package-summary.html">net.markenwerk.utils.json.handler</a></dt>
 <dd>
-<div class="block">A <a href="net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a> is a <a href="net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> that indicates that the
- handling of a JSON document or a JSON value failed.</div>
+<div class="block">A <a href="net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a> is a <a href="net/markenwerk/utils/json/common/JsonProcessingException.html" title="class in net.markenwerk.utils.json.common"><code>JsonProcessingException</code></a> that
+ indicates that a <a href="net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler"><code>JsonHandler</code></a> couldn't handle an event in one of the
+ callback methods.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/handler/JsonHandlingException.html#JsonHandlingException-java.lang.String-java.lang.Throwable-">JsonHandlingException(String, Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.handler.<a href="net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></dt>
 <dd>
-<div class="block">Creates a new <a href="net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a> with the given message and
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/JsonStateException.html" title="class in net.markenwerk.utils.json.common"><code>JsonStateException</code></a> with the given message and
  cause.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/handler/JsonHandlingException.html#JsonHandlingException-java.lang.String-">JsonHandlingException(String)</a></span> - Constructor for exception net.markenwerk.utils.json.handler.<a href="net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></dt>
 <dd>
-<div class="block">Creates a new <a href="net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a> with the given message.</div>
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/JsonStateException.html" title="class in net.markenwerk.utils.json.common"><code>JsonStateException</code></a> with the given message.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/handler/JsonHandlingException.html#JsonHandlingException-java.lang.Throwable-">JsonHandlingException(Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.handler.<a href="net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></dt>
 <dd>
-<div class="block">Creates a new <a href="net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a> with the given cause.</div>
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/JsonStateException.html" title="class in net.markenwerk.utils.json.common"><code>JsonStateException</code></a> with the given cause.</div>
 </dd>
-<dt><a href="net/markenwerk/utils/json/common/JsonSyntaxError.html" title="enum in net.markenwerk.utils.json.common"><span class="typeNameLink">JsonSyntaxError</span></a> - Enum in <a href="net/markenwerk/utils/json/common/package-summary.html">net.markenwerk.utils.json.common</a></dt>
+<dt><a href="net/markenwerk/utils/json/common/JsonIndexException.html" title="class in net.markenwerk.utils.json.common"><span class="typeNameLink">JsonIndexException</span></a> - Exception in <a href="net/markenwerk/utils/json/common/package-summary.html">net.markenwerk.utils.json.common</a></dt>
 <dd>
-<div class="block">A <a href="net/markenwerk/utils/json/common/JsonSyntaxError.html" title="enum in net.markenwerk.utils.json.common"><code>JsonSyntaxError</code></a> describes the kinds of syntax error a JSON parser
- may encounter.</div>
+<div class="block">A <a href="net/markenwerk/utils/json/common/JsonIndexException.html" title="class in net.markenwerk.utils.json.common"><code>JsonIndexException</code></a> is a <a href="net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> that indicates that
+ a given value is not a valid index for a given JSON structure.</div>
 </dd>
-<dt><a href="net/markenwerk/utils/json/common/JsonSyntaxException.html" title="class in net.markenwerk.utils.json.common"><span class="typeNameLink">JsonSyntaxException</span></a> - Exception in <a href="net/markenwerk/utils/json/common/package-summary.html">net.markenwerk.utils.json.common</a></dt>
+<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonIndexException.html#JsonIndexException-java.lang.String-java.lang.Throwable-">JsonIndexException(String, Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonIndexException.html" title="class in net.markenwerk.utils.json.common">JsonIndexException</a></dt>
 <dd>
-<div class="block">A <a href="net/markenwerk/utils/json/common/JsonSyntaxException.html" title="class in net.markenwerk.utils.json.common"><code>JsonSyntaxException</code></a> is a <a href="net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> that indicates that
- a JSON parser encountered a JSON syntax error while parsing a JSON document.</div>
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/JsonIndexException.html" title="class in net.markenwerk.utils.json.common"><code>JsonIndexException</code></a> with the given message
+ and cause.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonSyntaxException.html#JsonSyntaxException-net.markenwerk.utils.json.common.JsonSyntaxError-int-int-java.lang.String-java.lang.String-">JsonSyntaxException(JsonSyntaxError, int, int, String, String)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonSyntaxException.html" title="class in net.markenwerk.utils.json.common">JsonSyntaxException</a></dt>
+<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonIndexException.html#JsonIndexException-java.lang.String-">JsonIndexException(String)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonIndexException.html" title="class in net.markenwerk.utils.json.common">JsonIndexException</a></dt>
 <dd>
-<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/JsonSyntaxException.html" title="class in net.markenwerk.utils.json.common"><code>JsonSyntaxException</code></a> for the given components.</div>
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/JsonIndexException.html" title="class in net.markenwerk.utils.json.common"><code>JsonIndexException</code></a> with the given message.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonIndexException.html#JsonIndexException-java.lang.Throwable-">JsonIndexException(Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonIndexException.html" title="class in net.markenwerk.utils.json.common">JsonIndexException</a></dt>
+<dd>
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/JsonIndexException.html" title="class in net.markenwerk.utils.json.common"><code>JsonIndexException</code></a> with the given cause.</div>
+</dd>
+<dt><a href="net/markenwerk/utils/json/common/JsonProcessingException.html" title="class in net.markenwerk.utils.json.common"><span class="typeNameLink">JsonProcessingException</span></a> - Exception in <a href="net/markenwerk/utils/json/common/package-summary.html">net.markenwerk.utils.json.common</a></dt>
+<dd>
+<div class="block">A <a href="net/markenwerk/utils/json/common/JsonProcessingException.html" title="class in net.markenwerk.utils.json.common"><code>JsonProcessingException</code></a> is a <a href="net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> that indicates
+ that a JSON related operation couldn't be performed.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonProcessingException.html#JsonProcessingException-java.lang.String-java.lang.Throwable-">JsonProcessingException(String, Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonProcessingException.html" title="class in net.markenwerk.utils.json.common">JsonProcessingException</a></dt>
+<dd>
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/JsonProcessingException.html" title="class in net.markenwerk.utils.json.common"><code>JsonProcessingException</code></a> with the given message
+ and cause.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonProcessingException.html#JsonProcessingException-java.lang.String-">JsonProcessingException(String)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonProcessingException.html" title="class in net.markenwerk.utils.json.common">JsonProcessingException</a></dt>
+<dd>
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/JsonProcessingException.html" title="class in net.markenwerk.utils.json.common"><code>JsonProcessingException</code></a> with the given message.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonProcessingException.html#JsonProcessingException-java.lang.Throwable-">JsonProcessingException(Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonProcessingException.html" title="class in net.markenwerk.utils.json.common">JsonProcessingException</a></dt>
+<dd>
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/JsonProcessingException.html" title="class in net.markenwerk.utils.json.common"><code>JsonProcessingException</code></a> with the given cause.</div>
+</dd>
+<dt><a href="net/markenwerk/utils/json/common/JsonStateException.html" title="class in net.markenwerk.utils.json.common"><span class="typeNameLink">JsonStateException</span></a> - Exception in <a href="net/markenwerk/utils/json/common/package-summary.html">net.markenwerk.utils.json.common</a></dt>
+<dd>
+<div class="block">A <a href="net/markenwerk/utils/json/common/JsonStateException.html" title="class in net.markenwerk.utils.json.common"><code>JsonStateException</code></a> is a <a href="net/markenwerk/utils/json/common/JsonProcessingException.html" title="class in net.markenwerk.utils.json.common"><code>JsonProcessingException</code></a> that
+ indicates that a JSON related operation couldn't be performed because the
+ JSON related object is not in the correct state for that operation.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonStateException.html#JsonStateException-java.lang.String-java.lang.Throwable-">JsonStateException(String, Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonStateException.html" title="class in net.markenwerk.utils.json.common">JsonStateException</a></dt>
+<dd>
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/JsonStateException.html" title="class in net.markenwerk.utils.json.common"><code>JsonStateException</code></a> with the given message and
+ cause.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonStateException.html#JsonStateException-java.lang.String-">JsonStateException(String)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonStateException.html" title="class in net.markenwerk.utils.json.common">JsonStateException</a></dt>
+<dd>
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/JsonStateException.html" title="class in net.markenwerk.utils.json.common"><code>JsonStateException</code></a> with the given message.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonStateException.html#JsonStateException-java.lang.Throwable-">JsonStateException(Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonStateException.html" title="class in net.markenwerk.utils.json.common">JsonStateException</a></dt>
+<dd>
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/JsonStateException.html" title="class in net.markenwerk.utils.json.common"><code>JsonStateException</code></a> with the given cause.</div>
 </dd>
 <dt><a href="net/markenwerk/utils/json/common/handler/text/JsonTextJsonHandler.html" title="class in net.markenwerk.utils.json.common.handler.text"><span class="typeNameLink">JsonTextJsonHandler</span></a> - Class in <a href="net/markenwerk/utils/json/common/handler/text/package-summary.html">net.markenwerk.utils.json.common.handler.text</a></dt>
 <dd>
-<div class="block">A <a href="net/markenwerk/utils/json/common/handler/text/JsonTextJsonHandler.html" title="class in net.markenwerk.utils.json.common.handler.text"><code>JsonTextJsonHandler</code></a> is a <a href="net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="class in net.markenwerk.utils.json.common.handler.text"><code>AbstractAppendingJsonTextJsonHandler</code></a> that calculates a
- pretty JSON text for the handled JSON document as a result.</div>
+<div class="block">A <a href="net/markenwerk/utils/json/common/handler/text/JsonTextJsonHandler.html" title="class in net.markenwerk.utils.json.common.handler.text"><code>JsonTextJsonHandler</code></a> is a
+ <a href="net/markenwerk/utils/json/common/handler/text/AbstractAppendingJsonTextJsonHandler.html" title="class in net.markenwerk.utils.json.common.handler.text"><code>AbstractAppendingJsonTextJsonHandler</code></a> that calculates a pretty JSON
+ text for the handled JSON document as a result.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/handler/text/JsonTextJsonHandler.html#JsonTextJsonHandler--">JsonTextJsonHandler()</a></span> - Constructor for class net.markenwerk.utils.json.common.handler.text.<a href="net/markenwerk/utils/json/common/handler/text/JsonTextJsonHandler.html" title="class in net.markenwerk.utils.json.common.handler.text">JsonTextJsonHandler</a></dt>
 <dd>
@@ -462,13 +439,13 @@
 </dd>
 <dt><a href="net/markenwerk/utils/json/common/JsonValueException.html" title="class in net.markenwerk.utils.json.common"><span class="typeNameLink">JsonValueException</span></a> - Exception in <a href="net/markenwerk/utils/json/common/package-summary.html">net.markenwerk.utils.json.common</a></dt>
 <dd>
-<div class="block">A <a href="net/markenwerk/utils/json/common/JsonValueException.html" title="class in net.markenwerk.utils.json.common"><code>JsonValueException</code></a> is a <a href="net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> indicates that a JSON
- value couldn't be processed.</div>
+<div class="block">A <a href="net/markenwerk/utils/json/common/JsonValueException.html" title="class in net.markenwerk.utils.json.common"><code>JsonValueException</code></a> is a <a href="net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> that indicates
+ that a JSON value couldn't be processed or failed to fulfill a constraint.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonValueException.html#JsonValueException-java.lang.String-java.lang.Throwable-">JsonValueException(String, Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonValueException.html" title="class in net.markenwerk.utils.json.common">JsonValueException</a></dt>
 <dd>
-<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/JsonValueException.html" title="class in net.markenwerk.utils.json.common"><code>JsonValueException</code></a> with the given message and
- cause.</div>
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/JsonValueException.html" title="class in net.markenwerk.utils.json.common"><code>JsonValueException</code></a> with the given message
+ and cause.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonValueException.html#JsonValueException-java.lang.String-">JsonValueException(String)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonValueException.html" title="class in net.markenwerk.utils.json.common">JsonValueException</a></dt>
 <dd>
@@ -487,30 +464,6 @@
 <dt><a href="net/markenwerk/utils/text/indentation/LineBreak.html" title="enum in net.markenwerk.utils.text.indentation"><span class="typeNameLink">LineBreak</span></a> - Enum in <a href="net/markenwerk/utils/text/indentation/package-summary.html">net.markenwerk.utils.text.indentation</a></dt>
 <dd>
 <div class="block">An <a href="net/markenwerk/utils/text/indentation/Whitespace.html" title="enum in net.markenwerk.utils.text.indentation"><code>Whitespace</code></a> is a line break character string.</div>
-</dd>
-</dl>
-<a name="I:M">
-<!--   -->
-</a>
-<h2 class="title">M</h2>
-<dl>
-<dt><a href="net/markenwerk/utils/json/common/MissingJsonValueException.html" title="class in net.markenwerk.utils.json.common"><span class="typeNameLink">MissingJsonValueException</span></a> - Exception in <a href="net/markenwerk/utils/json/common/package-summary.html">net.markenwerk.utils.json.common</a></dt>
-<dd>
-<div class="block">A <a href="net/markenwerk/utils/json/common/MissingJsonValueException.html" title="class in net.markenwerk.utils.json.common"><code>MissingJsonValueException</code></a> is a <a href="net/markenwerk/utils/json/common/JsonValueException.html" title="class in net.markenwerk.utils.json.common"><code>JsonValueException</code></a> indicates
- that a JSON structure has no JSON value for a given index.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/MissingJsonValueException.html#MissingJsonValueException-java.lang.String-java.lang.Throwable-">MissingJsonValueException(String, Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/MissingJsonValueException.html" title="class in net.markenwerk.utils.json.common">MissingJsonValueException</a></dt>
-<dd>
-<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/MissingJsonValueException.html" title="class in net.markenwerk.utils.json.common"><code>MissingJsonValueException</code></a> with the given message
- and cause.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/MissingJsonValueException.html#MissingJsonValueException-java.lang.String-">MissingJsonValueException(String)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/MissingJsonValueException.html" title="class in net.markenwerk.utils.json.common">MissingJsonValueException</a></dt>
-<dd>
-<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/MissingJsonValueException.html" title="class in net.markenwerk.utils.json.common"><code>MissingJsonValueException</code></a> with the given message.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/MissingJsonValueException.html#MissingJsonValueException-java.lang.Throwable-">MissingJsonValueException(Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/MissingJsonValueException.html" title="class in net.markenwerk.utils.json.common">MissingJsonValueException</a></dt>
-<dd>
-<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/MissingJsonValueException.html" title="class in net.markenwerk.utils.json.common"><code>MissingJsonValueException</code></a> with the given cause.</div>
 </dd>
 </dl>
 <a name="I:N">
@@ -675,22 +628,28 @@
 <div class="block">Called when the parsing of a JSON object encountered a JSON string.</div>
 </dd>
 </dl>
-<a name="I:T">
-<!--   -->
-</a>
-<h2 class="title">T</h2>
-<dl>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonSyntaxException.html#toString--">toString()</a></span> - Method in exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonSyntaxException.html" title="class in net.markenwerk.utils.json.common">JsonSyntaxException</a></dt>
-<dd>&nbsp;</dd>
-</dl>
 <a name="I:V">
 <!--   -->
 </a>
 <h2 class="title">V</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonSyntaxError.html#valueOf-java.lang.String-">valueOf(String)</a></span> - Static method in enum net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonSyntaxError.html" title="enum in net.markenwerk.utils.json.common">JsonSyntaxError</a></dt>
+<dt><a href="net/markenwerk/utils/json/common/VacantJsonIndexException.html" title="class in net.markenwerk.utils.json.common"><span class="typeNameLink">VacantJsonIndexException</span></a> - Exception in <a href="net/markenwerk/utils/json/common/package-summary.html">net.markenwerk.utils.json.common</a></dt>
 <dd>
-<div class="block">Returns the enum constant of this type with the specified name.</div>
+<div class="block">A <a href="net/markenwerk/utils/json/common/VacantJsonIndexException.html" title="class in net.markenwerk.utils.json.common"><code>VacantJsonIndexException</code></a> is a <a href="net/markenwerk/utils/json/common/JsonValueException.html" title="class in net.markenwerk.utils.json.common"><code>JsonValueException</code></a>
+ indicates that a JSON structure has no JSON value for a given index.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/VacantJsonIndexException.html#VacantJsonIndexException-java.lang.String-java.lang.Throwable-">VacantJsonIndexException(String, Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/VacantJsonIndexException.html" title="class in net.markenwerk.utils.json.common">VacantJsonIndexException</a></dt>
+<dd>
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/VacantJsonIndexException.html" title="class in net.markenwerk.utils.json.common"><code>VacantJsonIndexException</code></a> with the given message
+ and cause.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/VacantJsonIndexException.html#VacantJsonIndexException-java.lang.String-">VacantJsonIndexException(String)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/VacantJsonIndexException.html" title="class in net.markenwerk.utils.json.common">VacantJsonIndexException</a></dt>
+<dd>
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/VacantJsonIndexException.html" title="class in net.markenwerk.utils.json.common"><code>VacantJsonIndexException</code></a> with the given message.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/VacantJsonIndexException.html#VacantJsonIndexException-java.lang.Throwable-">VacantJsonIndexException(Throwable)</a></span> - Constructor for exception net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/VacantJsonIndexException.html" title="class in net.markenwerk.utils.json.common">VacantJsonIndexException</a></dt>
+<dd>
+<div class="block">Creates a new <a href="net/markenwerk/utils/json/common/VacantJsonIndexException.html" title="class in net.markenwerk.utils.json.common"><code>VacantJsonIndexException</code></a> with the given cause.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/markenwerk/utils/text/indentation/LineBreak.html#valueOf-java.lang.String-">valueOf(String)</a></span> - Static method in enum net.markenwerk.utils.text.indentation.<a href="net/markenwerk/utils/text/indentation/LineBreak.html" title="enum in net.markenwerk.utils.text.indentation">LineBreak</a></dt>
 <dd>
@@ -699,11 +658,6 @@
 <dt><span class="memberNameLink"><a href="net/markenwerk/utils/text/indentation/Whitespace.html#valueOf-java.lang.String-">valueOf(String)</a></span> - Static method in enum net.markenwerk.utils.text.indentation.<a href="net/markenwerk/utils/text/indentation/Whitespace.html" title="enum in net.markenwerk.utils.text.indentation">Whitespace</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="net/markenwerk/utils/json/common/JsonSyntaxError.html#values--">values()</a></span> - Static method in enum net.markenwerk.utils.json.common.<a href="net/markenwerk/utils/json/common/JsonSyntaxError.html" title="enum in net.markenwerk.utils.json.common">JsonSyntaxError</a></dt>
-<dd>
-<div class="block">Returns an array containing the constants of this enum type, in
-the order they are declared.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/markenwerk/utils/text/indentation/LineBreak.html#values--">values()</a></span> - Static method in enum net.markenwerk.utils.text.indentation.<a href="net/markenwerk/utils/text/indentation/LineBreak.html" title="enum in net.markenwerk.utils.text.indentation">LineBreak</a></dt>
 <dd>
@@ -740,7 +694,7 @@ the order they are declared.</div>
 <div class="block">Creates a new <a href="net/markenwerk/utils/text/indentation/WhitespaceIndentation.html" title="class in net.markenwerk.utils.text.indentation"><code>WhitespaceIndentation</code></a>.</div>
 </dd>
 </dl>
-<a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:J">J</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;</div>
+<a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:J">J</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;</div>
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
 <div class="bottomNav"><a name="navbar.bottom">
 <!--   -->

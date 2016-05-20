@@ -86,8 +86,7 @@
 <td class="colFirst"><a href="../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler">JsonHandler</a>&lt;Result&gt;</td>
 <td class="colLast">
 <div class="block">A <a href="../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler"><code>JsonHandler</code></a> provides a collection of callback methods that can be
- called to describe a JSON document and calculates a result for the described
- JSON document.</div>
+ called for a sequence of events that describe a JSON document.</div>
 </td>
 </tr>
 </tbody>
@@ -127,8 +126,9 @@
 <tr class="altColor">
 <td class="colFirst"><a href="../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler">JsonHandlingException</a></td>
 <td class="colLast">
-<div class="block">A <a href="../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a> is a <a href="../../../../../net/markenwerk/utils/json/common/JsonException.html" title="class in net.markenwerk.utils.json.common"><code>JsonException</code></a> that indicates that the
- handling of a JSON document or a JSON value failed.</div>
+<div class="block">A <a href="../../../../../net/markenwerk/utils/json/handler/JsonHandlingException.html" title="class in net.markenwerk.utils.json.handler"><code>JsonHandlingException</code></a> is a <a href="../../../../../net/markenwerk/utils/json/common/JsonProcessingException.html" title="class in net.markenwerk.utils.json.common"><code>JsonProcessingException</code></a> that
+ indicates that a <a href="../../../../../net/markenwerk/utils/json/handler/JsonHandler.html" title="interface in net.markenwerk.utils.json.handler"><code>JsonHandler</code></a> couldn't handle an event in one of the
+ callback methods.</div>
 </td>
 </tr>
 </tbody>
