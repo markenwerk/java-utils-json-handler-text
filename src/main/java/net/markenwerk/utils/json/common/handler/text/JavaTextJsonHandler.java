@@ -29,7 +29,7 @@ import net.markenwerk.utils.text.indentation.LineBreak;
 /**
  * A {@link JavaTextJsonHandler} is a
  * {@link AbstractAppendingJavaTextJsonHandler} that calculates a text, that
- * mimics the {@link Object#toString()} behavior of Javas collection classes,
+ * mimics the {@link Object#toString()} behavior of Java's collection classes,
  * for the handled JSON document as a result.
  * 
  * @author Torsten Krause (tk at markenwerk dot net)

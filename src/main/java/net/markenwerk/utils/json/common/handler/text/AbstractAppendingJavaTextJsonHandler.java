@@ -34,7 +34,7 @@ import net.markenwerk.utils.text.indentation.Indentation;
 /**
  * A {@link AbstractAppendingJavaTextJsonHandler} is a {@link JsonHandler} that
  * appends the handled JSON document as a text, that mimics the
- * {@link Object#toString()} behavior of Javas collection classes, to a given
+ * {@link Object#toString()} behavior of Java's collection classes, to a given
  * {@link Appendable}.
  * 
  * 
